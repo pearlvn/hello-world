@@ -6,3 +6,5 @@ author - gsn | Aug 10, 2016
 !
 
 ## adding placeholder vagrantfile | Aug 10, 2016
+
+## added mongod.sh
