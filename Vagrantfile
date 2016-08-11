@@ -67,5 +67,7 @@ Vagrant.configure("2") do |config|
   # config.vm.provision "shell", inline: <<-SHELL
   sudo chmod +x mongod.sh
   sudo ./mongod.sh
+  sudo chmod +x Flask.sh
+  ./Flask.sh
   SHELL
 end
