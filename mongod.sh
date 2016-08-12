@@ -9,6 +9,7 @@ fi
 yum list |grep mongo
 if [ $? -ne 0 ];then
   cd /etc/yum.repos.d
+  echo
   for i in *.repo
   do
       sed -i "s:enabled=0:enabled=1:g" $i
