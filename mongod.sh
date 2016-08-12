@@ -8,6 +8,7 @@ fi
 
 yum list |grep mongo
 if [ $? -ne 0 ];then
+  cd /etc/yum.repos.d
   cat >mongodb-org-3.2.repo <<!
 [mongodb-org-3.2]
 name=MongoDB Repository
