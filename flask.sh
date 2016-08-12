@@ -7,6 +7,11 @@ if [$cat /etc/redhat-release |awk '{print $3}'|cut -b1) -gt 6 ];then
 fi
 
 mkdir -p /var/www/Flask
+cd /etc/yum.repos.d
+for i in *.repo
+do
+   sed -i "s/enabled=0/enabled=1/g" $i
+done
 cd /var/www/Flask
 yum groupinstall 'Development Tools'
 yum install -y zlib-devel openssl-devel sqlite-devel bzip2-devel
