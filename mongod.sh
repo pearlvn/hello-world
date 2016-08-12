@@ -13,6 +13,7 @@ if [ $? -ne 0 ];then
   do
       sed -i "s/enabled=0/enabled=1/g" $i 
   done
+  echo
   cat >mongodb-org-3.2.repo <<!
 [mongodb-org-3.2]
 name=MongoDB Repository
