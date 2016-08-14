@@ -30,9 +30,15 @@ mkdir app
 cd app
 #### To be done endpoints configuration
 cat >Flask.py <<!
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 App = Flask(__name__)
-@App.route("/")
+@app.route('/login', methods=['GET', 'POST'])
+def login():
+    if request.method == 'POST':
+        update_mongoDB()
+    else:
+        return (uid,date,number of occurrences)
+
 if __name__ == "__main__":
       App.run (host='127.0.0.1', port=8080)
 !
