@@ -30,12 +30,35 @@ mkdir app
 cd app
 #### To be done endpoints configuration
 cat >Flask.py <<!
-from flask import Flask, render_template, request
-App = Flask(__name__)
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        update_mongoDB()
+from flask import Flask, render_template
+fluser = Flask(__name__)
+
+@fluser.route("/")
+def hello():
+return render_template('index.html')
+
+if __name__ == "__main__":
+fluser.run (host='127.0.0.1',port=8080)
+
+#    cmd = ["ls"," -l"]
+#   p = subprocess.Popen(cmd, stdout = subprocess.PIPE,
+#                            stderr=subprocess.PIPE,
+#                           stdin=subprocess.PIPE)
+#   out,err = p.communicate()
+#    return out
+
+def hello():
+        if request.method == 'POST':
+        # update_mongoDB  ### code needs to be added , of following form
+        if valid_login(request.form['uid'],request.form['username'],
+                       request.form['md5checksum']):
+            return update_mongoDB(request.form)
+        else:
+            error = 'Invalid user/md5check'
+    # the code below is executed if the request method
+    # was GET or the credentials were invalid
+    return render_template('login.html', error=error)
+
     else:
         return (uid,date,number of occurrences)
 
