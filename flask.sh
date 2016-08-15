@@ -34,11 +34,7 @@ from flask import Flask, render_template
 fluser = Flask(__name__)
 
 @fluser.route("/")
-def hello():
-return render_template('index.html')
 
-if __name__ == "__main__":
-fluser.run (host='127.0.0.1',port=8080)
 
 #    cmd = ["ls"," -l"]
 #   p = subprocess.Popen(cmd, stdout = subprocess.PIPE,
@@ -49,7 +45,7 @@ fluser.run (host='127.0.0.1',port=8080)
 
 def hello():
         if request.method == 'POST':
-        # update_mongoDB  ### code needs to be added , of following form
+        # update_mongoDB  ### code needs to be added , of following form -  TBD
         if valid_login(request.form['uid'],request.form['username'],
                        request.form['md5checksum']):
             return update_mongoDB(request.form)
@@ -63,6 +59,7 @@ def hello():
         return (uid,date,number of occurrences)
 
 if __name__ == "__main__":
-      App.run (host='127.0.0.1', port=8080)
+fluser.run (host='127.0.0.1',port=8080)
+
 !
 nohup python3.4 Flask.py &
