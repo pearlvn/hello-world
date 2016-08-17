@@ -37,7 +37,7 @@ db.catalystDocs.insert([
 title: 'John Doe Doc',
 description: 'John Doe Doc',
 uid: '1',
-date: '2016-08-11-17-56-44',
+date: '2016-08-11T07:46:36.611Z',
 md5checksum: 'c2ac68f271d7053ad1416cdccdbc5776',
 url: 'http://localhost:8080/JohnDoeDoc',
 usraccessCount: '0'
@@ -46,7 +46,7 @@ usraccessCount: '0'
 title: 'Jane Doe Doc',
 description: 'Jane Doe Doc',
 uid: '1',
-date: '2016-08-11-17-56-44',
+date: '2016-08-11T18:46:36.611Z',
 md5checksum: '0368c3bf935bbade67e13f733c42fdb9',
 url: 'http://localhost:8080/JaneDoeDoc',
 usraccessCount: '0'
