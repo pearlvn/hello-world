@@ -26,6 +26,7 @@ pip3.4 install pyvenv-3.4
 pyvenv-3.4 venv
 . venv/bin/activate
 pip3.4 install flask
+pip3.4 install pymongo
 mkdir app
 cd app
 #### To be done endpoints configuration
