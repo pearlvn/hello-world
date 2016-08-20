@@ -32,3 +32,12 @@ chkconfig mongod on
 
 mongoimport --db catalyst --collection docs --drop --file docTemplate.json
 
+#Test
+
+mongo <!
+use catalyst
+db.docs.find()
+exit
+!
+
+
