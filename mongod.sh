@@ -28,28 +28,7 @@ service mongod status
 [ $? -ne 0 ] && service mongod start
 chkconfig mongod on
 
-mongo <!
-use catalyst
-db.createCollection("catalystDocs")
-show collections
-db.catalystDocs.insert([
-{
-title: 'John Doe',
-description: 'John Doe',
-uid: '1',
-date: '2016-08-11T07:46:36.611Z',
-md5checksum: '32dc7ceca23c8ee8d335d2ff28a4076b',
-url: 'http://localhost:8080/JohnDoeDoc',
-usraccessCount: '0'
-},
-{
-title: 'Jane Doe',
-description: 'Jane Doe',
-uid: '1',
-date: '2016-08-11T18:46:36.611Z',
-md5checksum: '637f04a8031e95354f1b8a0e61e10fe2',
-url: 'http://localhost:8080/JaneDoeDoc',
-usraccessCount: '0'
-}
-])
-!
+# create mongodb collection fro json template
+
+mongoimport --db catalyst --collection docs --drop --file docTemplate.json
+
